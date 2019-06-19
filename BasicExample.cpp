@@ -1,5 +1,3 @@
-
-
 #include "stdafx.h"
 #include <osg/Geode>
 #include <osg/Geometry>
@@ -46,6 +44,7 @@ osg::ref_ptr<osg::Node> createSceneGraph()
 	c->push_back(osg::Vec4(0.f, 0.f, 1.f, 1.f));
 	c->push_back(osg::Vec4(1.f, 1.f, 1.f, 1.f));
 
+
 	// Create an array for the single normal.
 	osg::ref_ptr<osg::Vec3Array> n = new osg::Vec3Array;
 	geom->setNormalArray(n.get());
@@ -88,6 +87,7 @@ osg::ref_ptr<osg::Node> createSceneGraph()
 
 int main(int, char**)
 {
+	//do this if you want to write to .osg file rather than using a viewer
 	/*osg::ref_ptr<osg::Node> root = createSceneGraph();
 	if (!root.valid())
 		osg::notify(osg::FATAL) <<
